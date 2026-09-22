@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="20" fill="#0B3B82"/>
+  <!-- Orange Cross/F element -->
+  <path d="M22 25 H45 V38 H34 V48 H42 V60 H34 V75 H22 Z" fill="#F37021"/>
+  <!-- Blue M element with white border for crispness -->
+  <path d="M48 75 V35 L62 55 L76 35 V75 H66 V52 L57 66 L48 52 V75 Z" fill="#FFFFFF"/>
+  <circle cx="78" cy="28" r="5" fill="#F37021"/>
+</svg>

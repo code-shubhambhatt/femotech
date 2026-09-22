@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Femotech Enterprises - UI Design Concepts</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0B0F19;
+      color: #F3F4F6;
+      padding: 30px 20px 80px;
+    }
+    .header {
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #9CA3AF;
+      font-size: 16px;
+    }
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+    .concept-card {
+      background: #111827;
+      border: 1px solid #1F2937;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .concept-header {
+      padding: 24px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1F2937;
+      background: #161F30;
+    }
+    .concept-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+    .concept-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .badge-dark {
+      background: rgba(243, 112, 33, 0.15);
+      color: #F37021;
+      border: 1px solid rgba(243, 112, 33, 0.3);
+    }
+    .badge-light {
+      background: rgba(11, 59, 130, 0.25);
+      color: #60A5FA;
+      border: 1px solid rgba(11, 59, 130, 0.5);
+    }
+    .concept-desc {
+      padding: 16px 30px;
+      color: #D1D5DB;
+      font-size: 15px;
+      background: #131B2A;
+      line-height: 1.6;
+    }
+    .image-wrapper {
+      padding: 20px;
+      background: #080D1A;
+      display: flex;
+      justify-content: center;
+    }
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid #233044;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Femotech Enterprises - UI Design Concepts</h1>
+    <p>Compare both directions below to decide which aesthetic aligns with your vision.</p>
+  </div>
+
+  <div class="container">
+    
+    <!-- CONCEPT 1 -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <div class="concept-title">Concept 1: Deep Tech Industrial Dark Luxe</div>
+        <span class="concept-badge badge-dark">Option 1</span>
+      </div>
+      <div class="concept-desc">
+        <strong>Vibe:</strong> Deep midnight obsidian/slate background (#0A1128), dramatic metallic foil lighting, subtle glassmorphic panels, live cleanroom telemetry dashboard widget, and glowing safety orange accents. Looks like an elite German/Swiss packaging conglomerate.
+      </div>
+      <div class="image-wrapper">
+        <img src="/images/concept_dark_luxe.jpg" alt="Concept 1: Deep Tech Industrial Dark Luxe">
+      </div>
+    </div>
+
+    <!-- CONCEPT 2 -->
+    <div class="concept-card">
+      <div class="concept-header">
+        <div class="concept-title">Concept 2: Swiss Cleanroom Architectural Modern</div>
+        <span class="concept-badge badge-light">Option 2</span>
+      </div>
+      <div class="concept-desc">
+        <strong>Vibe:</strong> Clean architectural off-white/warm grey, bold asymmetric Bento grid layout, prominent editorial typography, high-contrast deep navy blue (#0B3B82) with vivid orange accents, and generous whitespace. Looks like a high-end certified pharma leader.
+      </div>
+      <div class="image-wrapper">
+        <img src="/images/concept_swiss_light.jpg" alt="Concept 2: Swiss Cleanroom Architectural Modern">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
