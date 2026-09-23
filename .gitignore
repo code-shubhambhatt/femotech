@@ -23,5 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 
+# Local development & extraction scratch files
+scratch/
+*.py
+*.pyc
+__pycache__/
+
 # Local backup folders
 src_v1_light_backup/
