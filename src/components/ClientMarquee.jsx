@@ -1,53 +1,73 @@
 import React from 'react';
 import { clientsData } from '../data/clientsData';
-import { ShieldCheck } from 'lucide-react';
 
 export default function ClientMarquee() {
-  const featuredClients = clientsData.slice(0, 8);
+  // Split clients into two balanced rows for the staggered multi-row look
+  const half = Math.ceil(clientsData.length / 2);
+  const row1Clients = clientsData.slice(0, half);
+  const row2Clients = clientsData.slice(half);
+
+  // Duplicate each row for seamless continuous infinite looping
+  const row1List = [...row1Clients, ...row1Clients, ...row1Clients];
+  const row2List = [...row2Clients, ...row2Clients, ...row2Clients];
 
   return (
-    <section className="py-10 sm:py-14 bg-slate-50 border-b border-slate-200 text-left">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Understated Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-3 mb-6 sm:mb-8">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#0B3B82]" />
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
-              Verified Primary Packaging Vendor To
-            </span>
+    <section className="py-14 sm:py-20 bg-white border-b border-slate-200/80 overflow-hidden relative text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12">
+        {/* Understated Section Header matching user reference */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-slate-900 tracking-tight">
+          Trusted Partners
+        </h2>
+      </div>
+
+      {/* Multi-Row Staggered Marquee Container */}
+      <div className="relative w-full space-y-4 sm:space-y-6">
+        {/* Left Gradient Fade Mask */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-r from-white via-white/80 to-transparent z-10" />
+
+        {/* Right Gradient Fade Mask */}
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-36 bg-gradient-to-l from-white via-white/80 to-transparent z-10" />
+
+        {/* ROW 1: Moving Left to Right */}
+        <div className="overflow-hidden py-1">
+          <div className="animate-marquee-ltr flex items-center marquee-track">
+            {row1List.map((client, idx) => (
+              <div
+                key={`row1-${client.id}-${idx}`}
+                className="shrink-0 mx-2 sm:mx-3 transition-transform duration-300 hover:scale-105 hover:-translate-y-0.5 cursor-default"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  title={client.name}
+                  className="w-48 sm:w-60 h-auto object-contain shadow-2xs hover:shadow-md transition-shadow"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
-
-          <span className="text-[11px] sm:text-xs text-slate-400 font-mono">
-            Annexure-III Vendor Roster (FM/SMF/01)
-          </span>
         </div>
 
-        {/* Clean, Non-Gimmicky Client Strip */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5">
-          {featuredClients.map((client) => (
-            <div
-              key={client.name}
-              className="bg-white border border-slate-200/90 rounded-2xl p-3.5 sm:p-5 flex items-center gap-3 hover:border-orange-300 hover:shadow-md transition-all group"
-            >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-xs text-slate-700 shrink-0 font-mono group-hover:bg-orange-50 group-hover:text-orange-600 group-hover:border-orange-200 transition-colors">
-                {client.name.substring(0, 2).toUpperCase()}
+        {/* ROW 2: Moving Left to Right (Staggered offset & timing) */}
+        <div className="overflow-hidden py-1">
+          <div className="animate-marquee-ltr-slow flex items-center marquee-track">
+            {row2List.map((client, idx) => (
+              <div
+                key={`row2-${client.id}-${idx}`}
+                className="shrink-0 mx-2 sm:mx-3 transition-transform duration-300 hover:scale-105 hover:-translate-y-0.5 cursor-default"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  title={client.name}
+                  className="w-48 sm:w-60 h-auto object-contain shadow-2xs hover:shadow-md transition-shadow"
+                  loading="lazy"
+                />
               </div>
-
-              <div className="flex flex-col min-w-0">
-                <span className="font-heading font-bold text-xs sm:text-sm text-slate-900 truncate group-hover:text-[#0B3B82] transition-colors">
-                  {client.name}
-                </span>
-                <span className="text-[10px] sm:text-[11px] text-slate-500 truncate">
-                  {client.tagline}
-                </span>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
       </div>
     </section>
   );
 }
-

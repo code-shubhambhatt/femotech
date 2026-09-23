@@ -11,7 +11,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhatsAppFloat from './components/WhatsAppFloat';
 import RFQBuilder from './components/RFQBuilder';
-import { X, ArrowRight, Factory, ShieldCheck } from 'lucide-react';
+import { X, ArrowRight, Factory, ShieldCheck, Phone, MessageSquare } from 'lucide-react';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -75,13 +75,13 @@ export default function App() {
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                   
-                  {/* Photo of Selaqui Plant */}
+                  {/* Photo of Selaqui Plant - Full & Uncropped */}
                   <div className="lg:col-span-6">
-                    <div className="rounded-2xl overflow-hidden border border-slate-700 shadow-xl">
+                    <div className="rounded-2xl overflow-hidden border border-slate-700 shadow-xl bg-slate-950">
                       <img
                         src="/images/facility/selaqui_plant_exterior.jpg"
                         alt="Femotech Selaqui Manufacturing Plant"
-                        className="w-full h-72 sm:h-80 object-cover"
+                        className="w-full h-auto object-contain block hover:scale-[1.01] transition-transform duration-700"
                       />
                     </div>
                   </div>
@@ -132,14 +132,18 @@ export default function App() {
                     href="tel:+919997308215"
                     className="inline-flex items-center gap-2 bg-[#0B3B82] hover:bg-blue-950 text-white font-semibold text-sm px-6 py-3 rounded-lg shadow-sm transition-all"
                   >
+                    <Phone className="w-4 h-4" />
                     <span>Call +91 99973 08215</span>
                   </a>
-                  <button
-                    onClick={() => handleNavigate('contact')}
-                    className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-6 py-3 rounded-lg border border-slate-300 transition-all"
+                  <a
+                    href="https://wa.me/919997308215?text=Hello%20Mr.%20Harinder%20Singh%2C%20I%20would%20like%20to%20inquire%20regarding%20pharmaceutical%20foil%20specifications."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-semibold text-sm px-6 py-3 rounded-lg shadow-sm transition-all"
                   >
-                    <span>Submit RFQ Form</span>
-                  </button>
+                    <MessageSquare className="w-4 h-4" />
+                    <span>WhatsApp Director</span>
+                  </a>
                 </div>
               </div>
             </section>

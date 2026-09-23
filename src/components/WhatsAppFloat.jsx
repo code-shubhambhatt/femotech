@@ -14,25 +14,7 @@ export default function WhatsAppFloat({ onOpenRfq }) {
     <>
       {/* 1. Desktop & Tablet Floating WhatsApp Icon (Bottom Right) */}
       <div className="fixed bottom-6 right-6 z-40 hidden sm:flex flex-col items-end gap-2">
-        {showTooltip && (
-          <div className="bg-white border border-slate-200 text-slate-800 p-3 rounded-2xl shadow-xl max-w-xs text-xs flex items-start gap-2.5 animate-fadeIn relative">
-            <button
-              onClick={() => setShowTooltip(false)}
-              className="absolute top-2 right-2 text-slate-400 hover:text-slate-600"
-              aria-label="Dismiss message"
-            >
-              <X className="w-3.5 h-3.5" />
-            </button>
-            <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 mt-1 shrink-0 animate-ping" />
-            <div className="pr-4">
-              <span className="font-bold text-slate-900 block">Instant B2B Foil Inquiry</span>
-              <span className="text-slate-500 text-[11px] block mt-0.5">
-                Chat directly with Mr. Harinder Singh (Director) on WhatsApp.
-              </span>
-            </div>
-          </div>
-        )}
-
+        
         <button
           onClick={handleWhatsApp}
           className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white flex items-center justify-center shadow-xl hover:shadow-emerald-500/40 transition-all transform hover:scale-105 active:scale-95 group"

@@ -27,23 +27,25 @@ export default function Infrastructure() {
         {/* Real Plant Visual Feature: Exterior + Rewinding Machine */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-14 sm:mb-16 items-center">
           
-          {/* Real Selaqui Building Photo */}
+          {/* Real Selaqui Building Photo - Full & Uncropped */}
           <div className="lg:col-span-7">
-            <div className="relative rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 group">
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white group flex flex-col">
               <img
                 src="/images/facility/selaqui_plant_exterior.jpg"
                 alt="Femotech Enterprises Plant Building in Central Hope Town, Selaqui Dehradun"
-                className="w-full h-[280px] sm:h-[380px] lg:h-[420px] object-cover object-center group-hover:scale-102 transition-transform duration-700"
+                className="w-full h-auto object-contain object-center"
               />
-              <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/95 via-slate-950/70 to-transparent p-4 sm:p-5 text-white">
-                <span className="text-[10px] sm:text-xs font-bold text-orange-400 uppercase tracking-wider block mb-1">
-                  Manufacturing Premises • Selaqui, Dehradun
-                </span>
-                <p className="text-xs sm:text-sm font-heading font-semibold text-slate-100">
-                  8,500 Sq. Ft. RCC Structure with Kota Stone Cleanroom Flooring
-                </p>
-                <span className="text-[10px] sm:text-[11px] text-slate-300 block mt-0.5 truncate">
-                  Khasra No. 323MI, Ground Floor, Central Hope Town, Camp Road
+              <div className="p-3.5 sm:p-4 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 border-t border-slate-800">
+                <div>
+                  <span className="text-[10px] sm:text-xs font-bold text-orange-400 uppercase tracking-wider block">
+                    Manufacturing Premises • Selaqui, Dehradun
+                  </span>
+                  <p className="text-xs sm:text-sm font-heading font-semibold text-slate-100 mt-0.5">
+                    8,500 Sq. Ft. RCC Structure with Kota Stone Cleanroom Flooring
+                  </p>
+                </div>
+                <span className="text-[10px] sm:text-[11px] text-slate-400 font-mono shrink-0">
+                  Camp Road, IND Area Selaqui
                 </span>
               </div>
             </div>
@@ -56,7 +58,7 @@ export default function Infrastructure() {
                 <img
                   src="/images/facility/rewinding_machine.jpg"
                   alt="Foil Rewinding & Slitting Line on Cleanroom Floor"
-                  className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
               <div className="p-3.5 bg-slate-900 text-white flex items-center justify-between text-xs">

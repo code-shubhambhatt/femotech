@@ -34,6 +34,35 @@
   animation-play-state: paused;
 }
 
+/* Left to right continuous smooth marquee animation */
+@keyframes marqueeLeftToRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeftToRight 40s linear infinite;
+}
+
+.animate-marquee-ltr-slow {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeftToRight 48s linear infinite;
+}
+
+.animate-marquee-ltr:hover,
+.animate-marquee-ltr-slow:hover {
+  animation-play-state: paused;
+}
+
+
+
 /* Technical Specification Table Enhancements */
 .spec-table-row:nth-child(even) {
   background-color: #F8FAFC;

@@ -45,14 +45,15 @@ export default function QuickStats() {
                 className="bg-white border border-slate-200/90 rounded-2xl p-4 sm:p-5 hover:border-orange-300 hover:shadow-md transition-all group"
               >
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-heading font-extrabold text-xl sm:text-3xl text-slate-900 tracking-tight group-hover:text-[#0B3B82] transition-colors">
-                      {stat.value}
-                    </span>
-                    <span className="text-[10px] sm:text-xs font-bold text-[#F37021] uppercase">
-                      {stat.unit}
-                    </span>
-                  </div>
+                <div className="flex flex-col">
+                  <span className="font-heading font-extrabold text-xl sm:text-3xl text-slate-900 tracking-tight group-hover:text-[#0B3B82] transition-colors">
+                    {stat.value}
+                  </span>
+
+                  <span className="text-[10px] sm:text-xs font-bold text-[#F37021] uppercase">
+                    {stat.unit}
+                  </span>
+                </div>
                   <div className="w-8 h-8 rounded-xl bg-orange-50 border border-orange-200/60 text-[#F37021] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Icon className="w-4 h-4" />
                   </div>

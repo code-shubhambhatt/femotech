@@ -70,7 +70,7 @@ export default function Footer({ onNavigate }) {
               </li>
               <li>
                 <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors">
-                  Contact &amp; Banking Details
+                  Plant Location &amp; Contact
                 </button>
               </li>
             </ul>
